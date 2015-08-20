@@ -1,0 +1,83 @@
+.masthead {
+    background-color: #fff;
+    color:@text-color;
+    padding-bottom: 40px;
+  
+  .logo {
+    display:block;
+    max-width:176px;
+    margin:10px 0;
+  }
+  
+  .nav-collapse {
+    position:static;
+  }
+  
+  .site-search {
+      display: none;
+  }
+  
+  .nav,
+  .navigation .nav-pills {
+    margin: 10px 0 0 -16px;
+      
+    @media (min-width: @large-screen) {
+      float: right;
+      margin-top: 25px;
+    }
+    
+    & > li {
+      
+      font-size:14px;
+      margin-left: 16px;
+      text-transform: uppercase;
+        
+      @media (min-width: @large-screen) {
+          margin-left: 36px;
+      }
+      
+      & > a {
+        padding:15px 0;
+        margin:0;
+        color:@primary;
+        font-weight:bold;
+        border-radius: 0;
+        position:relative;
+      }
+      
+      &.active > a,
+      & > a:hover {
+        background-color:transparent;
+        box-shadow:none;
+        
+        &:after {
+          content:'';
+          display: block;
+          width: 100%;
+          height: 6px;
+          position:absolute;
+          bottom:0;
+          background-color: @lightgrey;
+        }
+        
+        &:hover {
+          color:@primary;
+        }
+      }
+        
+      &.active > a:after {
+          background-color: @accent;
+      }
+    }
+  }
+    
+  .btn-navbar,
+  .btn-navbar:hover,
+  .btn-navbar:focus,
+  .btn-navbar:active,
+  .btn-navbar.active,
+  .btn-navbar.disabled,
+  .btn-navbar[disabled] {
+      background-color: @primary;
+  }
+}

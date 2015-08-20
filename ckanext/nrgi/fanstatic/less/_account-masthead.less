@@ -1,0 +1,71 @@
+@account-masthead-bg: #fff;
+
+.account-masthead {
+  background-color:@account-masthead-bg;
+  text-transform: uppercase;
+  
+  .account ul {
+      margin: 8px -10px 0 0;
+      
+      li {
+        border:none;
+
+        a {
+          line-height: 40px;
+          color:fade(@darkgrey, 70%);
+          font-weight: 600;
+            line-height: 32px;
+
+          &.sub {
+            font-weight: 600;
+          }
+
+          &:hover {
+              background-color: transparent;
+              color:@darkgrey;
+          }
+
+          i {
+              display: none;
+              
+              &.icon-signout {
+                  display: inline;
+              }
+          }
+
+          span.text {
+              position: static;
+              margin: 0;
+          }
+            
+            &.image {
+                display: none;
+            }
+        }
+        &.notifications {
+            a:hover {
+                 span {
+                    background-color: transparent;
+                     color: inherit;
+                 }
+            }
+            a span.badge,
+            a:hover span.badge{
+                background-color: fade(@darkgrey, 70%);
+                color: #fff;
+                display: none;
+            }
+             a span.badge {
+                border-radius: 8px;
+                padding: 1px 5px;
+            }
+            
+            &.notifications-important a span.badge {
+                background-color: @danger;
+                display: inline-block;
+            }
+
+        }
+    }
+  }
+}

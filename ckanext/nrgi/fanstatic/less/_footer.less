@@ -1,0 +1,21 @@
+.site-footer {
+  margin:0 -20px;
+  padding:30px 20px;
+  color:#fff;
+  font-size:14px;
+  
+  a {
+    color:inherit;
+  }
+  
+  .logos {
+    & > div {
+      margin-bottom:20px;
+    }
+    @media (min-width: @medium-screen) {
+      & > div:nth-child(n+3) {
+        text-align:right;
+      }
+    }
+  }
+}

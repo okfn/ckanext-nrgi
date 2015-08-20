@@ -1,0 +1,183 @@
+.box {
+    border: none;      
+    .box-shadow;
+    
+    .module-heading {
+        background-color: inherit;
+    }
+}
+
+.search-form .search-input button {
+    i {
+        color:@primary;
+    }
+    
+    &:hover {
+        i {
+            color: @accent;
+        }
+    }
+}
+        
+
+.homepage {
+  
+    .hero {
+        background-color: @primary;
+        color: #fff;
+        background-image: url("/images/banner.png");
+        background-position: center center;
+        line-height: 1.8;
+        padding: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        -webkit-box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.15);
+        box-shadow: inset 0px 2px 1px 0px rgba(0,0,0,0.15);
+        
+        h1, h2, h3, h4, h5, h6 {
+            color:inherit;
+        }
+        
+        .box {
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .module-search {
+            .module-content,
+            .tags {
+                background-color: transparent;
+                padding: 0; 
+            }
+            .search-giant {
+                input {
+                    border-color:#fff;
+                    box-shadow: none;
+
+                    @media (min-width: @large-screen) {
+                        padding: 18px;
+                    }
+                    
+                    &:focus {
+                        border-color: @accent;
+                    }
+                }
+                button {
+                    margin-top: -14px;
+                    right: 20px;
+                }
+            }
+            .tags {
+                margin-top: 30px;
+                height: 35px;
+                overflow: hidden;
+                
+                h3 {
+                    line-height:32px;
+                    margin: 0 20px 0 0;
+                    padding: 0;
+                    
+                    &:after {
+                        content: ':';
+                    }
+                }
+                
+                .tag {
+                    margin: 0 30px 10px 0;
+                }
+            }
+        }
+        @media (min-width: @medium-screen) {
+            padding: 30px 0;
+            font-size: 18px;
+            
+            h1 {
+                font-size: 55px;
+            }
+        }
+        
+        @media (min-width: @large-screen) {
+            padding-top: 50px;
+            padding-bottom: 75px;
+        }
+    }
+    
+    &.layout-1 {
+        .row1 {
+            .col1,
+            .col2 {
+                float: none;
+                width: auto;
+            }
+            
+            .col1 {
+                h1 {
+                    font-weight: normal;
+                }
+                
+                .featured {
+                    display: none;
+                }
+            }
+            .col2 {
+                position: static;
+                bottom: auto;
+                right: auto;
+                
+                .heading {
+                    .sr-only;
+                }
+            }
+        }
+        
+        .row2 {
+            .col1,
+            .col2 {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                
+                .module-image {
+                    display: none;
+                }
+                .media-heading {
+                    font-weight: normal;
+
+                    a {
+                        color: @accent;
+                    }
+                }
+            }
+            
+            @media (min-width: @large-screen) {
+                .col1,
+                .col2 {
+                    margin-top: -52px;
+                    
+                    .box {
+                        .module-heading {
+                            padding: 16px 52px;
+                            
+                            .media-heading {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+                
+                .col1 {
+                    .box {
+                        margin-left: -52px;
+                    }
+                }
+                .col2 {
+                    .box {
+                        margin-right: -52px;
+                    }
+                }
+            }
+        }
+    }
+}

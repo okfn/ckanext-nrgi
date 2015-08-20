@@ -1,0 +1,37 @@
+[role="main"] {
+    .wrapper {
+        .primary {
+            border-color: #fff;
+            
+            .dataset-heading {
+                font-size: 20px;
+            }
+        }
+        
+        background-color:@sidebar-color;
+        z-index: 1;
+
+        //move block of colour to right of wrapper
+        &:before,
+        &:not(.no-nav):before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: auto;
+            right: -52px;
+            left: -52px;
+            background-color: #fff;
+            display:block;
+            margin-right:0;
+            z-index: -1;
+            border-radius:3px;
+            .box-shadow;
+        }
+        
+        &:not(.no-nav):before {
+            @media (min-width: @large-screen) {
+                left: 257px;
+            }
+        }
+    }
+}

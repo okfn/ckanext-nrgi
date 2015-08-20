@@ -1,0 +1,46 @@
+.toolbar {
+  .full-width;
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 20px;
+  
+  .breadcrumb {
+    font-size:14px;
+    color:@mediumgrey;
+    
+    li {
+      text-shadow:none;
+        
+      &:after {
+        content: ' \005C';
+          margin-left: 4px;
+          margin-right: 4px;
+      }
+      
+      &.home {
+          .icon-home {
+              display: none;
+          }
+          
+          span {
+              display: inline;
+          }
+      }
+      
+      a {
+        text-decoration:none;
+        color:@primary;
+      }
+      
+      &.active {
+        font-weight:normal;
+        color:inherit;
+          
+        a {
+          font-weight:inherit;
+          color:inherit;
+        }
+      }
+    }
+  }
+}
