@@ -8,7 +8,7 @@
       aside.secondary {
         
         .module-heading {
-          background-color: @module-heading-color;
+          background-color: transparent;
           border:none;
         }
       }
@@ -38,6 +38,7 @@
           z-index:1;
           position:relative;
           padding-top:30px;
+          font-size: 14px;
           
           .module-narrow .module-heading,
           .module-narrow .module-content,
@@ -56,16 +57,6 @@
                   display: none;
               }
             
-            &:before {
-              content:'';
-              display:block;
-              width:15px;
-              position:absolute;
-              top:0;
-              bottom:0;
-              left:-15px;
-              background-color:@module-heading-color;
-            }
           }
           
           .context-info .image > a {

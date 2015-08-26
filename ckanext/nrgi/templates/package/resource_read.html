@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% block bodytag %} class="resource-page"{% endblock %}
+{% block banner %}
+    <h1 class="page-heading">{{ h.resource_display_name(res) | truncate(50) }}</h1>
+{% endblock %}
+{% block resource_read_title %}{% endblock %}
+{{ super() }}

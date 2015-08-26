@@ -22,22 +22,31 @@
             {{ super() }}
           {% endblock %}
           
-          <div class="page-banner">
-              {% block banner %}
-              {% endblock %}
-          </div>
+          <div class="page-banner">{% block banner %}{% if subtitle|trim == '' %}<h1>{%- block subtitle %}{% endblock -%}</h1>{% endif %}{% endblock %}</div>
 
-          <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' %} no-nav{% endif %}">
+          <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary_content()|trim == '' %} no-nav{% endif %}">
 
             {% block pre_primary %}
             {% endblock %}
 
             {% block primary %}
-              {{ super() }}
+              {% if self.secondary_content()|trim != '' %}
+              <div class="primary span9">
+              {% else %}
+              <div class="primary span12">
+              {% endif %}
+              {% block primary_content %}
+                {{ super() }}
+              {% endblock %}
+              </div>
             {% endblock %}
 
             {% block secondary %}
-              {{ super() }}
+              {% if self.secondary_content()|trim != '' %}
+              <aside class="secondary span3">
+                {% block secondary_content %}{% endblock %}
+              </aside>
+              {% endif %}
             {% endblock %}
           </div>
         {% endblock %}

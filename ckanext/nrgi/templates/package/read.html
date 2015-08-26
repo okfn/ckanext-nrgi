@@ -1,0 +1,19 @@
+{% ckan_extends %}
+
+{% block banner %}
+    <h1>
+        {{ pkg.title or pkg.name }}
+        {% if pkg.state.startswith('draft') %}
+          [{{ _('Draft') }}]
+        {% endif %}
+        {% if pkg.state == 'deleted' %}
+          [{{ _('Deleted') }}]
+        {% endif %}
+    </h1>
+{% endblock %}
+
+{% block primary_content_inner %}
+  {{ super() }}
+      {% block page_heading %}
+      {% endblock %}
+{% endblock %}
