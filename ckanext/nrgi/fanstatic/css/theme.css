@@ -644,13 +644,19 @@ strong {
 .site-footer a {
   color: inherit;
 }
-.site-footer .logos > div {
-  margin-bottom: 20px;
+.site-footer .attribution {
+  font-size: 12px;
 }
-@media (min-width: 768px) {
-  .site-footer .logos > div:nth-child(n+3) {
-    text-align: right;
-  }
+.site-footer .attribution a {
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.site-footer .attribution a span {
+  display: block;
+}
+.site-footer .attribution svg {
+  fill: currentColor;
 }
 .toolbar {
   margin-left: -9999rem;

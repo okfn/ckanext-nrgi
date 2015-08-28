@@ -8,14 +8,20 @@
     color:inherit;
   }
   
-  .logos {
-    & > div {
-      margin-bottom:20px;
+  .attribution {
+        font-size: 12px;
+        
+        a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+        
+            span {
+                display: block;
+            }
+        }
+        svg {
+            fill: currentColor;
+        }
     }
-    @media (min-width: @medium-screen) {
-      & > div:nth-child(n+3) {
-        text-align:right;
-      }
-    }
-  }
 }
